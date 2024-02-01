@@ -1,0 +1,19 @@
+{
+  "name": "PokeDetails",
+  "id": "1334295767071538802",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "https://pokeapi.co/api/v2/pokemon/",
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/",
+      "https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/"
+    ]
+  }
+}

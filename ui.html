@@ -1,0 +1,30 @@
+<!-- ui.html -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/figma-plugin-ds.css">
+<style>
+  body {
+    padding: 2em;
+  }
+  div {
+    margin: 1em 0;
+  }
+  input {
+    display: block;
+  }
+</style>
+<h3>PokéDetails</h3>
+<input  class="input__field" id="pokemonId" placeholder="Pokémon ID">
+<div class="buttons">
+  <button class="button button--primary" id="search">Who's that Pokémon</button>
+</div>
+<script>
+  document.getElementById("search").onclick = () => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${document.getElementById("pokemonId").value}`)
+      .then(response => {
+        response.json().then(results => {
+          const pokemonName = results.forms[0].name;
+          const pokemonSprite = results.sprites.front_default;
+          parent.postMessage({ pluginMessage: { name: pokemonName, sprite: pokemonSprite} }, "*");
+        });
+      })
+  }
+</script>
