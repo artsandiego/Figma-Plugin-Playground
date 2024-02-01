@@ -12,5 +12,5 @@ If you have your dev environment ready, go here https://youtu.be/p-z566ILvxc?t=3
 1. Install Node JS, VS Code, and Figma
 2. Create Figma Plugin via the Figma App
 3. Open the created Figma Plugin Folder in VS Code
-4. Install Figma Stylings Package `npm install @figma/plugin-typings`
+4. Install Figma Plugin Typings Package `npm install @figma/plugin-typings`
 5. Start coding
